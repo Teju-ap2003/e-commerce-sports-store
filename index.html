@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <header class="header">
+        
+        <p class="logo">Sports Store</p>
+        <input type="text" id="searchBar" placeholder="Search for products..." onkeyup="searchProducts()">
+        <div class="cart" onclick="toggleCartPopup()">
+            <i class="bx bxs-cart"></i>
+            <p id="count">0</p>
+           
+        </div>
+       
+    </header>
+    
+    <section class="product-list">
+        <div class="product" data-name="Cricket Bat" data-price="799">
+            <img src="images/image.png" alt="Cricket Bat" class="image">
+            <p>Cricket Bat ₹799</p>
+            <button onclick="addToCart('Cricket Bat', 799,this,)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Cricket Ball" data-price="199">
+            <img src="images/cricket ball.jpeg" alt="Cricket Ball" class="image">
+            <p>Cricket Ball ₹199</p>
+            <button onclick="addToCart('Cricket Ball', 199,this)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Badminton Racket" data-price="849">
+            <img src="images/racket.jpeg" alt="Badminton Racket" class="image">
+            <p>Badminton Racket ₹849</p>
+            <button onclick="addToCart('Badminton Racket', 849,this)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Shuttlecock" data-price="150">
+            <img src="images/Shuttlecock.jpeg" alt="Shuttlecock" class="image">
+            <p>Badminton Shuttlecock ₹150</p>
+            <button onclick="addToCart('Shuttlecock', 150,this)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Carrom" data-price="899">
+            <img src="images/carrom.webp" alt="Carrom" class="image">
+            <p>Carrom ₹899</p>
+            <button onclick="addToCart('Carrom', 899,this)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Football" data-price="699">
+            <img src="images/football.jpg" alt="Football" class="image">
+            <p>Football ₹699</p>
+            <button onclick="addToCart('Football', 699,this)">Add to cart</button>
+        </div>
+        <div class="product" data-name="Table Tennis" data-price="676">
+            <img src="images/table tennis.webp" alt="Table Tennis" class="image">
+            <p>Table Tennis ₹676</p>
+            <button  onclick="addToCart('Table Tennis', 676,this)">Add to cart</button>
+            
+        </div>
+    </section>
+ 
+
+    <!-- <div class="pagination">
+        <span>Page 1 of 3</span>
+        <a href="page1.html">Next ➡</a>
+    </div> -->
+
+    <div class="pagination">
+        <button onclick="prevPage()">⬅ Previous</button>
+        <span id="pageNumber">Page 1</span>
+        <button onclick="nextPage()">Next ➡</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background-color: #f5f5f5; }
+        .popup { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); }
+        img { width: 150px; height: 150px; }
+    </style>
+</head>
+<body>
+
+    <div class="popup">
+        <p>Processing your order...</p>
+        <!-- <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" alt="Processing..." /> -->
+        <video width="500" autoplay loop muted>
+            <source src="images/order.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector(".popup").innerHTML = "<p>Checkout successful! Redirecting...</p>";
+            localStorage.removeItem("cart"); 
+            setTimeout(() => {
+                window.location.href = "success.html"; 
+            }, 2000);
+        }, 3000);
+    </script>
+
+</body>
+</html>
