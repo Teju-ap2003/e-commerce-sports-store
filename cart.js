@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     updateCartUI();
 });
-
-// Function to update the cart UI
 function updateCartUI() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartItems = document.getElementById("cart-items");
